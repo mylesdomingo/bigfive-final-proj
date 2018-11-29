@@ -1,8 +1,10 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
-
+gem 'slack-ruby-bot'
+gem 'celluloid-io'
+gem 'chronic', '~> 0.10.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 gem 'pg'

@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actioncable (5.2.0)
       actionpack (= 5.2.0)
@@ -59,11 +59,33 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
+    celluloid (0.17.3)
+      celluloid-essentials
+      celluloid-extras
+      celluloid-fsm
+      celluloid-pool
+      celluloid-supervision
+      timers (>= 4.1.1)
+    celluloid-essentials (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-extras (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-fsm (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-io (0.17.3)
+      celluloid (>= 0.17.2)
+      nio4r (>= 1.1)
+      timers (>= 4.1.1)
+    celluloid-pool (0.20.5)
+      timers (>= 4.1.1)
+    celluloid-supervision (0.20.6)
+      timers (>= 4.1.1)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.2.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    chronic (0.10.2)
     climate_control (0.2.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -76,9 +98,15 @@ GEM
     crass (1.0.4)
     erubi (1.7.1)
     execjs (2.7.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.12.2)
+      faraday (>= 0.7.4, < 1.0)
     ffi (1.9.25)
+    gli (2.18.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    hashie (3.6.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -106,6 +134,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
@@ -167,6 +196,16 @@ GEM
     selenium-webdriver (3.13.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    slack-ruby-bot (0.11.1)
+      hashie
+      slack-ruby-client (>= 0.6.0)
+    slack-ruby-client (0.13.1)
+      activesupport
+      faraday (>= 0.9)
+      faraday_middleware
+      gli
+      hashie
+      websocket-driver
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -184,6 +223,7 @@ GEM
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    timers (4.2.0)
     turbolinks (5.1.1)
       turbolinks-source (~> 5.1)
     turbolinks-source (5.1.0)
@@ -213,7 +253,9 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
+  celluloid-io
   chromedriver-helper
+  chronic (~> 0.10.2)
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
@@ -223,6 +265,7 @@ DEPENDENCIES
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver
+  slack-ruby-bot
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
@@ -235,4 +278,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.3
+   1.16.5
